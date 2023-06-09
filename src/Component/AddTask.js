@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addTask } from '../Redux/actions';
+import {addtodo} from '../Redux/TodoSlice'
 const AddTask = () => {
     const [desc, setDesc] = useState('')
     const [etat, setEtat] = useState('');
     const dispatch = useDispatch()
     const handleSubmit = (e) => {
         e.preventDefault()
-        dispatch(addTask({desc,etat,id:Math.random()})) 
+        dispatch(addtodo({desc,etat,id:Math.random()})) 
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -20,8 +21,6 @@ const AddTask = () => {
             <div>
                 <input type="submit" value="Add" />
             </div>
-
-
         </form>
     )
 }

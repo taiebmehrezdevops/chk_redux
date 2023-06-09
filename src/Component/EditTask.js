@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import ReactModal from 'react-modal';
 import { Edit } from '../Redux/actions';
+import {editodo} from '../Redux/TodoSlice'
 
 const EditTask = ({todo}) => {
     const [description, setDesc] = useState(todo.desc);
@@ -16,7 +17,7 @@ const EditTask = ({todo}) => {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(Edit({...todo,desc:description}))
+        dispatch(editodo({id:todo.id,desc:description}))
        closeModal()
       };
     return(

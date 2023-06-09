@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import ToDo from './ToDo'
 
 const ListTask = () => {
-    const task = useSelector ((state) => state.task)
-    const dispatch = useDispatch()
+    const taskk = useSelector ((state) => state.tasks.task)
+   console.log(taskk,'test');
     return(
         <div>
-            {task.map((t) => (
+            {taskk.map((t) => (
               <ToDo e={t}/>
         ))}
         </div>

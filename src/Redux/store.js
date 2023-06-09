@@ -1,4 +1,9 @@
 import { createStore } from "redux";
 import reducer  from "./reducer";
+import { configureStore } from "@reduxjs/toolkit";
+import todoredcuer from "./TodoSlice";
+import etodo from "./TodoSlice"
 
-export const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export const store = configureStore({
+    reducer:{tasks:todoredcuer}
+});

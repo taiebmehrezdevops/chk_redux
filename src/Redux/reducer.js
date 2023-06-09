@@ -3,6 +3,34 @@ import { Task } from "../Component/Task";
 const initialState = {
     task: Task
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const reducer = (state = initialState, action) =>{
     
     switch (action.type){
